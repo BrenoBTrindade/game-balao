@@ -52,7 +52,7 @@ export default function Home() {
           <button className='mt-20 bg-white p-5 rounded-xl font-bold animate-bounce hover:bg-red-500 hover:text-white shadow-gray-700 shadow-md border-none duration-700' onClick={handleStartGame}>Começar Jogo</button>
         ) : (
           <div className='mt-10'>
-            <p className='text-shadow-PRIMARY absolute mt-5 text-white ml-10 text-2xl font-semibold'>{message}</p>
+            <p className='text-shadow-PRIMARY absolute mt-5 text-white text-2xl font-semibold'>{message}</p>
             <BalloonButton onClick={handleClick} disabled={disabled}/>
           </div>
         )}
