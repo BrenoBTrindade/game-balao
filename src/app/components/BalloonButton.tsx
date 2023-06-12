@@ -1,13 +1,15 @@
+import BalloonIcon from "../icons/Balloon";
+
 type Props = {
- children: React.ReactNode,
+ children?: React.ReactNode,
  onClick: () => void;
  disabled: boolean
 }
 
-export default function BalloonButton ({children, onClick, disabled}: Props) {
+export default function BalloonButton ({onClick, disabled}: Props) {
     return (
-        <button onClick={onClick} disabled={disabled} className="bg-red-700 cursor-pointer h-36 w-36 rounded-full hover:scale-125 text-white duration-1000 disabled:text-transparent disabled:bg-transparent disabled:cursor-default">
-            {children}
+        <button onClick={onClick} disabled={disabled} className="cursor-pointer rounded-full h-[400px] w-[400px] hover:scale-125 duration-1000 ml-40 disabled:cursor-default disabled:opacity-0">
+            <BalloonIcon />
         </button>
     )
 }

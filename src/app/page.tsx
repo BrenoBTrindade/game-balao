@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import BalloonButton from './components/BalloonButton';
+import Image from 'next/image';
 
 const prizes = ['iPhone', 'Notebook', 'Fone de Ouvido', 'Camiseta', 'Bônus de 10%'];
 
@@ -35,26 +36,27 @@ export default function Home() {
 
 
   return (
-    <div className='flex flex-col w-[400px] items-center justify-center h-full mx-auto gap-10'>
-      <div className='flex flex-col text-center'>
-        <span className='text-5xl text-white font-bold'>Estoura</span>
-        <span className='text-7xl text-orange-300 font-bol'>Balão</span>
-        <span className='text-3xl text-white font-semibold'>de</span>
-        <span className='text-3xl uppercase text-white font-bold mt-5'>são</span>
-        <span className='text-3xl uppercase text-white font-bold'>joão</span>
-      </div>
-      {!isGameStarted ? (
-        <button onClick={handleStartGame}>Começar Jogo</button>
-      ) : (
-        <>
-          <p>{message}</p>
-          <div>
-            <BalloonButton onClick={handleClick} disabled={disabled}>
-                Estourar balão
-            </BalloonButton>
+    <main>
+        <Image loading='eager' className='absolute left-5 top-[30%]' src={"/saojoao.png"} alt='balão de São João' width={300} height={300}/>
+        <Image loading='eager' className='absolute right-5 top-[30%]' src={"/saojoao.png"} alt='balão de São João' width={300} height={300}/>
+        <Image loading='eager' className='absolute bottom-10 left-[40%]' src={"/logo-white-click.png"} alt='balão de São João' width={300} height={300}/>
+      <div className='flex flex-col w-[400px] items-center justify-center h-full mx-auto gap-10 text-shadow mt-5'>
+        <div className='flex flex-col text-center'>
+          <span className='text-5xl text-white font-bold'>Estoura</span>
+          <span className='text-7xl text-orange-300 font-bold text-shadow-PRIMARY'>Balão</span>
+          <span className='text-3xl text-white font-semibold'>de</span>
+          <span className='text-3xl uppercase text-white font-bold mt-5'>são</span>
+          <span className='text-3xl uppercase text-white font-bold'>joão</span>
+        </div>
+        {!isGameStarted ? (
+          <button className='mt-20 bg-white p-5 rounded-xl font-bold animate-bounce hover:bg-red-500 hover:text-white shadow-gray-700 shadow-md border-none duration-700' onClick={handleStartGame}>Começar Jogo</button>
+        ) : (
+          <div className='mt-10'>
+            <p className='text-shadow-PRIMARY absolute mt-5 text-white ml-10 text-2xl font-semibold'>{message}</p>
+            <BalloonButton onClick={handleClick} disabled={disabled}/>
           </div>
-        </>
-      )}
-    </div>
+        )}
+      </div>
+    </main>
   );
 }
