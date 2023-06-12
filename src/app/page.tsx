@@ -37,11 +37,11 @@ export default function Home() {
 
   return (
     <main>
-        <Image loading='eager' className='absolute left-5 top-[30%]' src={"/saojoao.png"} alt='balão de São João' width={300} height={300}/>
-        <Image loading='eager' className='absolute right-5 top-[30%]' src={"/saojoao.png"} alt='balão de São João' width={300} height={300}/>
-        <Image loading='eager' className='absolute bottom-10 left-[40%]' src={"/logo-white-click.png"} alt='balão de São João' width={300} height={300}/>
+        <Image loading='eager' className='absolute left-5 top-[30%] animate-pulse' src={"/saojoao.png"} alt='balão de São João' width={300} height={300}/>
+        <Image loading='eager' className='absolute right-5 top-[30%] animate-pulse' src={"/saojoao.png"} alt='balão de São João' width={300} height={300}/>
+        <Image loading='eager' className='absolute bottom-10 left-[43%]' src={"/logo-white-click.png"} alt='balão de São João' width={200} height={200}/>
       <div className='flex flex-col w-[400px] items-center justify-center h-full mx-auto gap-10 text-shadow mt-5'>
-        <div className='flex flex-col text-center'>
+        <div className='flex flex-col text-center animate-fadeInDown'>
           <span className='text-5xl text-white font-bold'>Estoura</span>
           <span className='text-7xl text-orange-300 font-bold text-shadow-PRIMARY'>Balão</span>
           <span className='text-3xl text-white font-semibold'>de</span>
