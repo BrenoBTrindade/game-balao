@@ -39,7 +39,7 @@ export default function Home() {
     <main>
         <Image loading='eager' className='absolute left-5 top-[30%] animate-pulse' src={"/saojoao.png"} alt='balão de São João' width={300} height={300}/>
         <Image loading='eager' className='absolute right-5 top-[30%] animate-pulse' src={"/saojoao.png"} alt='balão de São João' width={300} height={300}/>
-        <Image loading='eager' className='absolute bottom-10 left-[43%]' src={"/logo-white-click.png"} alt='balão de São João' width={200} height={200}/>
+        <Image loading='eager' className='absolute bottom-10 left-[43%] bg-white p-2 rounded-lg shadow-black shadow-md' src={"/clickspeed.png"} alt='balão de São João' width={200} height={200}/>
       <div className='flex flex-col w-[400px] items-center justify-center h-full mx-auto gap-10 text-shadow mt-5'>
         <div className='flex flex-col text-center animate-fadeInDown'>
           <span className='text-5xl text-white font-bold'>Estoura</span>
