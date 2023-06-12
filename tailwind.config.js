@@ -15,7 +15,8 @@ module.exports = {
         text: '#5B5B5B',
       },
       textShadow: {
-        DEFAULT: '0.1em 0.1em 0.3em var(--tw-shadow-color, black)',
+        DEFAULT: '0.1em 0.1em 0.3em var(--tw-shadow-color, red)',
+        PRIMARY: '0.1em 0.1em 0.3em var(--tw-shadow-color, transparent)',
       },
       animationDelay: {
         0: '0',
@@ -58,7 +59,7 @@ module.exports = {
         fadeIn: 'fadeIn 1.5s both',
       },
       backgroundImage: {
-        'hero-image': "url('/images/hero.jpg')",
+        'balloon': "url('/balloon.svg')",
         'hero-image-mobile': "url('/images/hero-mobile.jpg')",
       },
     },
